@@ -1,13 +1,6 @@
 import React from "react";
 
 function Navigation() {
-    // const [nav, setNav] = useState(false)
-
-    // const handleClick = () => setNav(!nav)
-
-    // const handleClose = () => {
-    //     setNav(false);
-    // };
 
     const scrollToSection = (sectionId) => {
         const section = document.getElementById(sectionId);
