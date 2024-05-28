@@ -22,6 +22,34 @@ code {
     monospace;
 }
 
+/* Scroll Bar - Start */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #66FCF1;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  border: 0; /* Remove the border on hover */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+/* Scroll Bar - End */
+
+/* Section - Start */
 section {
   padding-top: 60px;
 }
+
+.light-section {
+  background-color: #0A121D;
+}
+/* Section - End */
