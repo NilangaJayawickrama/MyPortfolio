@@ -1,12 +1,11 @@
-import React from 'react';
-import Introduction from "./Introduction";
-import AboutMe from "./AboutMe";
-import Skills from "./Skills";
-import Projects from "./Projects";
-import Experience from "./Experience";
-import Testimonials from "./Testimonials";
-import Blogs from "./Blogs";
-import ContactMe from "./ContactMe";
+import Introduction from "presentation/pages/home/sections/Introduction";
+import AboutMe from "presentation/pages/home/sections/AboutMe";
+import Skills from "presentation/pages/home/sections/Skills";
+import Projects from "presentation/pages/home/sections/Projects";
+import Experience from "presentation/pages/home/sections/Experience";
+import Testimonials from "presentation/pages/home/sections/Testimonials";
+import Blogs from "presentation/pages/home/sections/Blogs";
+import ContactMe from "presentation/components/ContactMe";
 
 const Home = () => {
     return (
