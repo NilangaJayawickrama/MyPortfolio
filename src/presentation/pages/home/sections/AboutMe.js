@@ -2,11 +2,9 @@ import React from 'react';
 
 const AboutMe = () => {
     return (
-        <div>
-            <div className="h-64 bg-gray-200">
-                <h1 className='text-black pt-20'>AboutMe</h1>
-            </div>
-        </div>
+        <section className="pt-[70px] flex justify-center items-center py-12 md:py-16 bg-[#111827]">
+            
+        </section>
     );
 }
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const Introduction = () => {
   return (
@@ -45,11 +46,54 @@ const Introduction = () => {
           </p>
 
           {/* Buttons */}
-          <div className="mt-6 flex items-center gap-6">
-            <button className="bg-cyan-400 text-black font-semibold px-5 py-2 rounded-full flex items-center border-4 border-cyan-400 overflow-hidden gap-2">
-              Download CV ⬇️
-            </button>
+          <div className="mt-6 justify-center md:justify-start flex items-center gap-6 ">
+            <a
+              href="https://drive.google.com/uc?export=download&id=1z1sZjph1kQXusgfYhRrszRHOnbn2XI1b"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="group-hover:bg-black/20 group-hover:shadow-2xl group-hover:shadow-cyan-500/50 bg-cyan-400 font-semibold text-black px-6 py-3 rounded-full flex items-center border-4 border-cyan-400 overflow-hidden gap-2 transition-all duration-300 ease-in-out hover:text-white relative">
+                <span className="relative z-10">Download CV</span>
+                <span className="group-hover:-rotate-12 transition-transform duration-300">⬇️</span>
+                {/* Glow shimmer */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 transform -rotate-2 group-hover:animate-shimmer opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-full" />
+              </button>
+            </a>
           </div>
+
+          {/* Social icons row */}
+          <div className="mt-5 flex items-center justify-center md:justify-start gap-5 text-cyan-400 text-2xl">
+            <a
+              href="https://github.com/NilangaJayawickrama"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white transition-colors"
+              aria-label="GitHub"
+            >
+              <FaGithub />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/nilanga-jayawickrama/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white transition-colors"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedin />
+            </a>
+
+            <a
+              href="https://x.com/NPJayawickrama"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white transition-colors"
+              aria-label="Twitter"
+            >
+              <FaTwitter />
+            </a>
+          </div>
+
         </div>
 
       </div>
