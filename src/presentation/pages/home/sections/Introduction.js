@@ -56,6 +56,7 @@ const Introduction = () => {
               href="https://drive.google.com/uc?export=download&id=1z1sZjph1kQXusgfYhRrszRHOnbn2XI1b"
               target="_blank"
               rel="noopener noreferrer"
+              className="no-underline"
             >
               <button className="transition-all duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 hover:bg-cyan-500 hover:border-cyan-300 hover:shadow-2xl hover:shadow-cyan-600/50 bg-cyan-400 font-semibold text-black px-6 py-3 rounded-full flex items-center border-4 border-cyan-400 overflow-hidden gap-2 hover:text-white relative group">
                 <span className="relative z-10">Download CV</span>
