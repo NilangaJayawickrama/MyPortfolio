@@ -61,10 +61,6 @@ const Experience = () => {
                     onClick={() => openModal(exp)}
                   >
                     <div className="row align-items-center">
-                      {/* <h5 className="text-white font-semibold mb-1">
-                        {exp.title}
-                      </h5> */}
-
                       <div
                         className="w-100 d-flex flex-column flex-md-row justify-content-between align-items-md-center"
                         style={{ minHeight: "2px" }}
@@ -88,22 +84,45 @@ const Experience = () => {
                         </div>
                       </div>
 
-                      <p className="text-gray-300 text-sm mb-0 line-clamp-2">
-                        {exp.description.length > 120
-                          ? `${exp.description.substring(0, 120)}...`
-                          : exp.description}
-                        {exp.description.length > 120 && (
-                          <button
-                            className="text-cyan-400 hover:text-white text-xs font-medium ms-2 p-0 bg-transparent border-0"
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              openModal(exp);
-                            }}
-                          >
-                            Show more →
-                          </button>
+                      {/* Description */}
+                      <div className="mt-2">
+                        {Array.isArray(exp.description) &&
+                        exp.description.length > 0 ? (
+                          exp.description.slice(0, 2).map((point, index) => (
+                            <div
+                              key={index}
+                              className="text-sm text-gray-300 mb-1 last:mb-0"
+                            >
+                              <div className="flex items-start gap-2">
+                                <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full flex-shrink-0 mt-1.5"></div>
+                                <span className="text-gray-300 text-sm leading-relaxed flex-1">
+                                  {point.length > 80
+                                    ? point.substring(0, 80) + "..."
+                                    : point}
+                                </span>
+                              </div>
+                            </div>
+                          ))
+                        ) : (
+                          <p className="text-gray-300 text-sm mb-0">
+                            {exp.description}
+                          </p>
                         )}
-                      </p>
+
+                        {Array.isArray(exp.description) &&
+                          exp.description.length > 2 && (
+                            <button
+                              className="text-cyan-400 hover:text-white text-xs font-medium ms-3 mt-1 p-0 bg-transparent border-0 flex items-center gap-1"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                openModal(exp);
+                              }}
+                            >
+                              +{exp.description.length - 2} more →
+                            </button>
+                          )}
+                      </div>
+                      
                     </div>
                   </div>
                 </div>
