@@ -134,17 +134,17 @@ const Experience = () => {
           </div>
 
           {/* RIGHT: Image (hidden on mobile) */}
-          <div className="col-lg-5 justify-center ">
+          <div className="col-lg-5 justify-center">
             <div className="row flex justify-end w-full lg:w-100">
               <img
                 src="/images/experience-image.png"
                 alt="About me"
-                className="w-44 sm:w-52 md:w-64 lg:w-150 xl:w-200 max-h-200 object-contain"
+                className="w-44 sm:w-52 md:w-64 lg:w-150 xl:w-200 max-h-200 object-contain hidden lg:block"
               />
             </div>
 
             {/* Buttons */}
-            <div className="mt-10 justify-center flex items-center gap-6 ">
+            <div className="mt-0 lg:mt-10 justify-center flex items-center gap-6">
               <a
                 href="https://drive.google.com/uc?export=download&id=1z1sZjph1kQXusgfYhRrszRHOnbn2XI1b"
                 target="_blank"
