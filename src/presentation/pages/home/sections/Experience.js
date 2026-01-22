@@ -50,7 +50,7 @@ const Experience = () => {
         </p>
 
         <div className="row g-5">
-          {/* LEFT */}
+          {/* LEFT side*/}
           <div className="col-lg-7">
             <div className="position-relative">
               {experiences.map((exp, index) => (
@@ -133,7 +133,7 @@ const Experience = () => {
             </div>
           </div>
 
-          {/* RIGHT: Image (hidden on mobile) */}
+          {/* RIGHT side */}
           <div className="col-lg-5 justify-center">
             <div className="row flex justify-end w-full lg:w-100">
               <img
