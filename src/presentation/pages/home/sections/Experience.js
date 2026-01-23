@@ -128,7 +128,6 @@ const Experience = () => {
                 </div>
               ))}
 
-              {/* Vertical line */}
               <div className="position-absolute bg-gradient-to-b from-transparent via-cyan-500/60 to-transparent w-[2px] left-2 top-2 bottom-2" />
             </div>
           </div>
