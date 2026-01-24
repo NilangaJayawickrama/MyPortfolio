@@ -88,21 +88,22 @@ const Experience = () => {
                       <div className="mt-2">
                         {Array.isArray(exp.description) &&
                         exp.description.length > 0 ? (
-                          exp.description.slice(0, 2).map((point, index) => (
-                            <div
-                              key={index}
-                              className="text-sm text-gray-300 mb-1 last:mb-0"
-                            >
-                              <div className="flex items-start gap-2">
-                                <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full flex-shrink-0 mt-1.5"></div>
-                                <span className="text-gray-300 text-sm leading-relaxed flex-1">
-                                  {point.length > 80
-                                    ? point.substring(0, 80) + "..."
-                                    : point}
-                                </span>
-                              </div>
-                            </div>
-                          ))
+                          <ul className="list-disc pl-5 space-y-2 text-sm leading-relaxed">
+                            {exp.description.slice(0, 2).map((point, index) => (
+                              <li
+                                key={index}
+                                className="text-sm text-cyan-400 mb-1 last:mb-0"
+                              >
+                                <div className="flex items-start gap-2">
+                                  <span className="text-gray-300 text-sm leading-relaxed flex-1">
+                                    {point.length > 80
+                                      ? point.substring(0, 80) + "..."
+                                      : point}
+                                  </span>
+                                </div>
+                              </li>
+                            ))}
+                          </ul>
                         ) : (
                           <p className="text-gray-300 text-sm mb-0">
                             {exp.description}
@@ -122,7 +123,6 @@ const Experience = () => {
                             </button>
                           )}
                       </div>
-                      
                     </div>
                   </div>
                 </div>
@@ -164,7 +164,7 @@ const Experience = () => {
         </div>
       </div>
 
-      {/* Bootstrap Modal */}
+      {/* Modal */}
       <Modal
         show={showModal}
         onHide={() => setShowModal(false)}
@@ -173,23 +173,24 @@ const Experience = () => {
       >
         <Modal.Header closeButton className="bg-[#050812] border-0">
           <Modal.Title className="text-white text-xl font-bold">
-            {selectedExp?.title}
+            <div>{selectedExp?.title}</div>
+            <div className="text-cyan-300 text-sm">{selectedExp?.company}</div>
           </Modal.Title>
         </Modal.Header>
+
         <Modal.Body className="bg-[#050812] border border-cyan-500/40 p-4 max-h-[60vh] overflow-y-auto">
-          <p className="text-gray-300 text-sm leading-relaxed">
-            {selectedExp?.description}
-          </p>
+          {Array.isArray(selectedExp?.description) ? (
+            <ul className="list-disc pl-5 space-y-2 text-gray-300 text-sm leading-relaxed">
+              {selectedExp.description.map((point, index) => (
+                <li key={index}>{point}</li>
+              ))}
+            </ul>
+          ) : (
+            <p className="text-gray-300 text-sm leading-relaxed">
+              {selectedExp?.description}
+            </p>
+          )}
         </Modal.Body>
-        <Modal.Footer className="bg-gray-900/50 border-t border-gray-800 justify-content-center">
-          <Button
-            variant="link"
-            className="text-cyan-400 hover:text-white px-0"
-            onClick={() => setShowModal(false)}
-          >
-            Close
-          </Button>
-        </Modal.Footer>
       </Modal>
     </section>
   );
