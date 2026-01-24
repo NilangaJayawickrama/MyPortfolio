@@ -49,7 +49,7 @@ const Experience = () => {
           Experience
         </p>
 
-        <div className="row g-5">
+        <div className="row sm:g-5">
           {/* LEFT side*/}
           <div className="col-lg-7">
             <div className="position-relative">
@@ -143,7 +143,7 @@ const Experience = () => {
             </div>
 
             {/* Buttons */}
-            <div className="mt-0 lg:mt-10 justify-center flex items-center gap-6">
+            <div className="md:mt-4 lg:mt-10 justify-center flex items-center gap-6">
               <a
                 href="https://drive.google.com/uc?export=download&id=1z1sZjph1kQXusgfYhRrszRHOnbn2XI1b"
                 target="_blank"
