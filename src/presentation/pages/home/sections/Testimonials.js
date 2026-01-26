@@ -108,11 +108,10 @@ const Testimonials = () => {
         </div> */}
 
         <div className="relative overflow-hidden max-w-6xl mx-auto rounded-2xl lg:px-8">
-          {/* Sliding track - PERFECT RESPONSIVE */}
           <div
             className="flex transition-transform duration-700 ease-in-out"
             style={{
-              transform: `translateX(-${index * 50}%)`, // 50% = half card width on desktop
+              transform: `translateX(-${index * 50}%)`,
               willChange: "transform",
             }}
           >
