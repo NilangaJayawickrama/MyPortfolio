@@ -65,7 +65,7 @@ const Testimonials = () => {
           Testimonials
         </p>
 
-        {/* Desktop / large: 2 cards */}
+        {/* Desktop : 2 cards */}
         {/* <div className="hidden lg:grid grid-cols-2 gap-6">
           {visibleTestimonials(true).map((t) => (
             <div
@@ -86,7 +86,7 @@ const Testimonials = () => {
           ))}
         </div> */}
 
-        {/* Mobile / tablet: 1 card */}
+        {/* Mobile : 1 card */}
         {/* <div className="lg:hidden">
           {visibleTestimonials(false).map((t) => (
             <div
