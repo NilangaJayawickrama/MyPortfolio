@@ -157,7 +157,7 @@ const Testimonials = () => {
           ))}
         </div>
 
-        {/* Arrow Buttons */}
+        {/* Buttons */}
         <div className="flex justify-center items-center gap-4 mt-8 lg:mt-12">
           <button
             onClick={goPrev}
